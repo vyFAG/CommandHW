@@ -1,0 +1,41 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+    name: Run MSBuild and VSTest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2.1.0
+        id: checkout_code
+      
+      - name: Setup MSBuild and add to PATH
+        uses: microsoft/setup-msbuild@v1.0.0
+        id: setup_msbuild
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+      
+      - name: Run MSBuild
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+        id: run_msbuild
+        run: msbuild .\CommandHW.sln
+      
+      - name: Setup VSTest and add to PATH
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+        uses: darenm/Setup-VSTest@v1
+        id: setup_vstest
+      
+      - name: Run VSTest
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+        id: run_vstest
+        run: vstest.console.exe /Platform:x64 .\Test\x64\Debug\CommandHWTest.dll

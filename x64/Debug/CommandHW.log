@@ -1,0 +1,33 @@
+﻿  CommandHW.cpp
+C:\Users\User\Documents\GitHub\CommandHW\CommandHW.cpp(213,31): warning C4101: ex: неиспользованная локальная переменная
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\utility(172,16): warning C4244: инициализация: преобразование "_Ty" в "_Ty1", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              _Ty1=int
+          ]
+C:\Users\User\Documents\GitHub\CommandHW\CommandHW.cpp(26,77): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::pair<int,int>::pair<double,double,0>(_Other1 &&,_Other2 &&) noexcept"
+          with
+          [
+              _Other1=double,
+              _Other2=double
+          ]
+C:\Users\User\Documents\GitHub\CommandHW\CommandHW.cpp(26,5): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::pair<int,int>::pair<double,double,0>(_Other1 &&,_Other2 &&) noexcept"
+          with
+          [
+              _Other1=double,
+              _Other2=double
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\utility(172,54): warning C4244: инициализация: преобразование "_Ty" в "_Ty2", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              _Ty2=int
+          ]
+  CommandHW.vcxproj -> C:\Users\User\Documents\GitHub\CommandHW\x64\Debug\CommandHW.exe
