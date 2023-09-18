@@ -1,4 +1,5 @@
-﻿  CommandHWTest.cpp
+﻿  pch.cpp
+  CommandHWTest.cpp
 C:\Users\User\Documents\GitHub\CommandHW\CommandHW.cpp(213,31): warning C4101: ex: неиспользованная локальная переменная
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\utility(172,16): warning C4244: инициализация: преобразование "_Ty" в "_Ty1", возможна потеря данных
           with
